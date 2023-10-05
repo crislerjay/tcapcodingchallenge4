@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Manrope:wght@500;700&display=swap');
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --dark-gray-blue: hsl(217, 19%, 35%);
+  --dark-blue: hsl(214, 17%, 51%);
+  --gray-blue: hsl(212, 23%, 69%);
+  --light-gray-blue: hsl(210, 46%, 95%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.3rem;
+}
+
+.spOnly {
+  display: none;
+}
+
+@media screen and (max-width:767px) {
+  .pcOnly {
+    display: none;
+  }
+
+  .spOnly {
+    display: block;
+  }
+}
+
+.wrap {
+  background-color: var(--light-gray-blue);
+  min-height: 100vh;
+  padding-top: 16.9vw;
+}
+
+img {
+  max-width: 100%;
+}
+
+.card {
+  position: relative;
+  max-width: 730px;
+  margin: auto;
+  padding-left: 285px;
+  background: url('../images/drawers.jpg') no-repeat top left;
+  background-size: 48%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.cardContent {
+  padding: 33px 40px 30px;
+  background: #fff;
+  border-radius: 0 10px 10px 0;
+}
+
+.ttl {
+  margin-bottom: 12px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark-gray-blue);
+  line-height: 1.4;
+  letter-spacing: 0.3px;
+}
+
+.txt {
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: var(--dark-blue);
+  line-height: 1.5;
+  letter-spacing: 0.1px;
+}
+
+.flex,
+.person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.avatar {
+  width: 40px;
+  margin-right: 17px;
+}
+
+.avatar img {
+  border-radius: 50%;
+}
+
+.personDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 4px 0;
+}
+
+.name {
+  font-weight: 700;
+  color: var(--dark-gray-blue);
+}
+
+.date {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--dark-blue);
+  letter-spacing: 0.6px;
+}
+
+.share {
+  position: relative;
+}
+
+.shareBtn {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 30px;
+  margin-top: 5px;
+  background: var(--light-gray-blue);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 99;
+}
+
+svg path {
+  fill: #6E8098;
+  -webkit-transition: fill 0.5s ease;
+  -o-transition: fill 0.5s ease;
+  transition: fill 0.5s ease;
+}
+
+.shareBtn.active svg path {
+  fill: #FFF;
+}
+
+.shareBtn.active {
+  background: var(--dark-blue);
+}
+
+.shareLinkWrap {
+  display: none;
+  position: absolute;
+  bottom: 96px;
+  right: -69px;
+}
+
+.shareLinkWrap.show {
+  display: block;
+}
+
+.shareLink {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 18px 38px 15px;
+  width: 248px;
+  background: var(--dark-gray-blue);
+  border-radius: 10px;
+  letter-spacing: 5px;
+}
+
+.shareLink::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: -12px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12px 12px 0 12px;
+  border-color: #48556a transparent transparent transparent;
+}
+
+.shareTxt {
+  font-size: 1.3rem;
+  color: var(--gray-blue);
+  text-transform: uppercase;
+}
+
+.shareLink p {
+  margin-right: 16px;
+}
+
+.shareLink a {
+  display: block;
+  width: 20px;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.shareLink a:hover {
+  opacity: .6;
+}
+
+.attribution { 
+  margin-top: 30px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%);
+}
+
+
+@media screen and (max-width:768px) {
+  .wrap {
+    padding-top: 74px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 325px;
+    padding: 200px 0 0;
+    background: url(../images/drawers.jpg) no-repeat top -15px center;
+    background-size: contain;
+    border-top-right-radius: 10px;
+  }
+
+  .cardContent {
+    padding: 36px 31px 18px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .ttl {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  .txt {
+    margin-bottom: 28px;
+    line-height: 1.6;
+  }
+
+  .shareLinkWrap {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 325px;
+  }
+  
+  .shareLink {
+    padding: 29px 38px;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .shareLink::after {
+    content: none;
+  }
+}
